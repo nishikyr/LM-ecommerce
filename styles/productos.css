@@ -1,0 +1,176 @@
+/* =============== CSS para los productos ================= */
+
+.item-3 h1{
+    text-align: center;
+}
+
+.section-productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;    
+}
+
+.producto{
+    text-align: center;
+}
+
+.descripcion_producto h5{
+    font-size: 1.3em;
+}
+
+.descripcion_producto p{
+    font-size: 1.2em;
+}
+
+.descripcion_producto a{
+    padding: 13px 31px;
+    font-size: 13px;
+    background-color:#e9c64b;  
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10em;
+}
+.descripcion_producto a:hover{
+    color: #e9c64b;
+    background-color: #fff;
+    transition: all .5s ease;
+    border: 1px solid #e9c64b;
+}
+
+
+/* === Descripcion del producto en Hover === */
+.producto {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.1);
+}
+
+.descripcion_producto2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 100%;
+    height: 85%;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.descripcion_producto2{
+    align-items: center;
+}
+.descripcion_producto2 p{
+    margin-top: 80px;
+    text-align: justify;
+}
+
+.producto:hover .descripcion_producto2 {
+    opacity: 10;
+}
+
+
+/*CSS para el carrito de Compra*/
+
+.mini-nav, .mini-footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #e9c64b;
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.mini-nav a{
+    background-color: #844b23;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 1em;
+}
+
+.compra{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 20px;
+    border-bottom: 1px solid #411b00;
+}
+
+.compra a{
+    padding: 5px 10px;
+    background-color:#e9c64b;
+    text-decoration: none;
+    border-radius: 10em; 
+}
+
+/* ================= Adicionales ===================*/
+
+.sec1{
+    background-color: #e9c64b;
+    border-radius: 10px;
+    
+}
+.sec1 h2{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'NoeDisplay';
+    font-weight: bold;
+}
+.sec1 p{
+    font-size: 20px;
+    font-family: 'NoeDisplay';
+    padding: 20px 80px;
+    text-align: center;
+}
+
+.sec2{
+    display: flex;
+    width: 100%;
+    padding: 20px 80px;
+    align-items: center;
+}
+.sec2 h2{
+    font-size: 35px;
+    font-family: 'NoeDisplay';
+    font-weight: bold;
+}
+.sec2 p{
+    font-size: 20px;
+    font-family: 'NoeDisplay';
+} 
+.sec2 div{
+    width: 70%;
+    margin: 20px;
+    
+}
+
+@media (max-width: 700px){
+    .sec2{
+        display: block;
+        padding: 0px;
+        width: 100%;
+    }
+    .sec2 div{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px){
+    .sec2{
+        font-size: 20px;
+    }
+}

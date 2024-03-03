@@ -1,0 +1,328 @@
+/* Estos estilos serán para header - navbar y footer*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* GRID */
+
+.container {
+    display: grid;
+    width: 100%;
+    margin:0px auto;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+  /* DIBUJAR LAS AREAS */
+    grid-template-areas: 
+    "head head"
+    "nav nav"
+    "main aside"
+    "ads ads"
+    "foot foot"
+    ; 
+}
+
+.item-2, .item-3, .item-4, .item-5{
+    font-size: 12px;
+}
+
+header {
+    grid-area: head;
+
+  /* FLEX */
+    display: flex;
+    flex-direction: row; /*por defecto*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+nav {
+    grid-area: nav;
+    display:flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 90vw;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ads {
+    grid-area:ads;
+}
+footer {
+    grid-area: foot;
+}
+
+
+.idiomas ul li{
+    display: inline-flex;
+    padding-right: 20px;
+}
+
+.item_enlaces{
+    align-items: center;
+    text-align: center;
+}
+.item_enlaces li{
+    display: inline-flex;
+    padding-right: 20px;
+}
+
+
+/* CSS GENERAL **/
+
+
+/* ============= CSS PARA NAVBAR Y CABECERA =================== */
+
+.item-1{
+    margin: 0;
+    font-size: 12px;
+}
+
+.item-1 p{
+    margin: 0;
+}
+.idiomas ul{
+    margin: 0;
+}
+
+.item-2{
+    width: 100%;
+    background-color: #F9F8F4;
+}
+
+.logo {
+    line-height: 80px;
+    padding: 0 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+nav .opciones {
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+nav .opciones li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 14px;
+}
+
+nav .opciones li a {
+    color: #411b00;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+nav .opciones li a:hover {
+    color: #e9c64b;
+    transition: 0.2s ease;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #411b00;
+    float: right;
+    line-height: 80px;
+    margin: 3px 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.opciones li a:hover {
+    border-bottom: 2px solid #e9c64b; /* Cambia el color del subrayado al pasar el cursor */
+    padding-bottom: 2px; /* Opcional: Agrega un pequeño espacio entre el texto y el subrayado */
+}
+
+
+
+@media (max-width: 952px) {
+    .logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav .opciones li a {
+        font-size: 16px;
+    }
+    .item-2{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .checkbtn {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .opciones {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #040404ce;
+        top: 94px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav .opciones li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav .opciones li a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    a:hover {
+        background: none;
+        color: #411b00;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .container{
+        grid-template-areas: 
+    "nav nav"
+    "aside aside"
+    "main main"
+    "ads ads"
+    "foot foot"
+    ;
+    }
+    .item-1{
+        display: none;
+    }
+}
+
+/* =============== CSS para Footer ================= */
+
+.footer-1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px solid #8b704f;
+    background-color: #F9F8F4;
+}
+
+.box{
+    margin-right: 20px;
+    text-align: center;
+}
+
+.social-media a{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-2{
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #F9F8F4;
+}
+
+.box div{
+    padding: 15px;
+}
+
+.f-enlaces a{
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20px 5px;
+    color: #000;
+}
+
+.box div a:hover{
+    color:#e38d36;
+    transition: all .5s ease;
+}
+
+.box h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: 'NoeDisplay';
+    font-size: 25px;
+}
+.box p{
+    margin-bottom: 10px;
+    color: #411b00;
+}
+.social-media a{
+    position: relative;
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    color: #000;
+    border-radius: 10em;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.social-media a:hover{
+    color: #411b00;
+    background-color: #fff;
+    transition: 0.5s ease;
+}
+
+.group-2{
+    color: #411b00;
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .footer-1{
+        display: block;
+        justify-content: space-evenly;
+    }
+    iframe{
+        width: 280px;
+        height: 150px;
+        padding-left: 20px;
+    }
+    .footer-1{
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px){
+    .footer-1{
+        display: block;
+        justify-content: space-evenly;
+    }
+}
+
