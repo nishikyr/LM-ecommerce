@@ -38,7 +38,7 @@ header {
 
   /* FLEX */
     display: flex;
-    flex-direction: row; /*por defecto*/
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -157,8 +157,8 @@ nav .opciones li a:hover {
 }
 
 .opciones li a:hover {
-    border-bottom: 2px solid #e9c64b; /* Cambia el color del subrayado al pasar el cursor */
-    padding-bottom: 2px; /* Opcional: Agrega un pequeño espacio entre el texto y el subrayado */
+    border-bottom: 2px solid #e9c64b; 
+    padding-bottom: 2px;
 }
 
 

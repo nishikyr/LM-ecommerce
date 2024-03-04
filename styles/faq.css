@@ -1,0 +1,95 @@
+
+.container {
+    display: grid;
+    width: 97vw;
+    margin:0px auto;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 3fr 1fr;
+
+    gap: 10px;
+
+  /* DIBUJAR LAS AREAS */
+    grid-template-areas: 
+    "head head"
+    "nav nav"
+    "main main"
+    "ads ads"
+    "foot foot"
+    ; 
+}
+
+/* ============= CSS PARA PREGUNTAS FRECUENTES (FAQ) ============*/
+
+.item-3 h1, h2{
+    font-family: 'Lora', serif;
+    color: #411b00;
+}
+
+.item-3 section{
+    margin-left: 20px;
+}
+
+.mini_encabezado{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-around;
+    width: 100%;
+}
+.box_ad1{
+    width: 100%;
+}
+
+.box_ad1 h1{
+    font-size: 40px;
+}
+.box_ad1 p{
+    font-size: 17px;
+}
+
+.preguntas li{
+    list-style: none;
+    padding: 5px 0px;
+    color: #b3ab18;
+}
+.preguntas li a{
+    text-decoration: none;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+.preguntas a:hover{
+    color: #b3ab18;
+    transition: all ease .5s;
+}
+
+.respuestas h2{
+    text-decoration: underline
+}
+.respuestas p, .respuestas li{
+    font-size: 18px;
+}
+
+.respuestas p:nth-child(1){
+    background-color: #b6b14f;
+    text-align: center;
+    border-radius: 25px;
+}
+
+@media (max-width: 720px){
+
+    .box_ad2{
+        height: 150px;
+        width: 100%;
+    }
+    .box_ad2 img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px){
+    .mini_encabezado{
+        flex-direction: column;
+    }
+}
